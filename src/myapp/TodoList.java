@@ -9,23 +9,30 @@ public class TodoList {
     public static void main(String[] args) {
 
         // Create a list of numbers
-        List<Integer> listOfInt = new LinkedList<>();
+        List<Integer> listOfInt = new LinkedList<Integer>();
 
         Console cons = System.console();
       
-        while (true) {
+        while(true) {
+
            String item = cons.readLine("Please enter a number.");
             item = item.trim();
 
-            if ("stop".equals(item))
+            if(item.equals("stop")) {
                 break;
+            }
 
             // Add the item to the list
             listOfInt.add(Integer.parseInt(item));
+
         }
 
         System.out.printf("Number of elements in the list: %d.\n", listOfInt.size());
-        for (Integer index = 0; index < listOfInt.size(); index++)
+        
+        for (Integer index = 0; index < listOfInt.size(); index++) {
             System.out.printf("[%d]: %s\n", index, listOfInt.get(index));
+        }
+   
     }
+
 }

@@ -1,22 +1,30 @@
 package myapp;
+
 import java.io.Console;
 
 public class Calculate {
-   public static void main(String[] args) {
-    Console cons = System.console();
-    int sum = 0;
 
-    while (true) {
-        String input = cons.readLine("Enter a number.");
-        input = input.trim();
+    public static void main(String[] args) {
     
-        if (input.equals("stop")) {
-        break;
-    }
+        Console cons = System.console();
+        int sum = 0;
 
-    sum += Integer.parseInt(input); //string to integer conversion
-}
+        while (true) {
 
-    System.out.printf("The total value is %d", sum);
-   } 
+            String input = cons.readLine("Enter a number.");
+            input = input.trim();
+    
+            if (input.equals("stop")) {
+                break;
+            }
+            else {
+            sum += Integer.parseInt(input); //string to integer conversion
+            }
+    
+        }
+
+        System.out.printf("The total value is %d.", sum);
+
+    } 
+
 }

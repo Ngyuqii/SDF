@@ -1,6 +1,6 @@
 package myapp;
 
-public class Todo {
+public class ToDo {
     
     public static void main(String[] args) {
         
